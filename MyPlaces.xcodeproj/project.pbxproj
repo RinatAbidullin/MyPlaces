@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		5587A51323EEDBA300D75394 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */; };
 		559A377323EF0E0300893544 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A377223EF0E0300893544 /* PlaceModel.swift */; };
 		55B89A9123F1A9BD00C00121 /* NewPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */; };
+		55B89A9323F3089100C00121 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89A9223F3089100C00121 /* StorageManager.swift */; };
 		FB9747504ABC8820D8ECF1F8 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729AFD26F7A538FE9FE3903F /* Pods_MyPlaces.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		559A377223EF0E0300893544 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceTableViewController.swift; sourceTree = "<group>"; };
+		55B89A9223F3089100C00121 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		729AFD26F7A538FE9FE3903F /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8927CAF58465D307876E3A4E /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		E3302E537D9A6B0B6DFFE293 /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */,
 				5587A50223EEC3DA00D75394 /* Main.storyboard */,
 				559A377223EF0E0300893544 /* PlaceModel.swift */,
+				55B89A9223F3089100C00121 /* StorageManager.swift */,
 				5587A50523EEC3DB00D75394 /* Assets.xcassets */,
 				5587A50723EEC3DB00D75394 /* LaunchScreen.storyboard */,
 				5587A50A23EEC3DB00D75394 /* Info.plist */,
@@ -97,7 +100,6 @@
 				E3302E537D9A6B0B6DFFE293 /* Pods-MyPlaces.debug.xcconfig */,
 				8927CAF58465D307876E3A4E /* Pods-MyPlaces.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +221,7 @@
 				55B89A9123F1A9BD00C00121 /* NewPlaceTableViewController.swift in Sources */,
 				5587A4FD23EEC3DA00D75394 /* AppDelegate.swift in Sources */,
 				5587A51123EEC82800D75394 /* MainTableViewController.swift in Sources */,
+				55B89A9323F3089100C00121 /* StorageManager.swift in Sources */,
 				559A377323EF0E0300893544 /* PlaceModel.swift in Sources */,
 				5587A51323EEDBA300D75394 /* CustomTableViewCell.swift in Sources */,
 				5587A4FF23EEC3DA00D75394 /* SceneDelegate.swift in Sources */,
