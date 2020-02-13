@@ -12,7 +12,7 @@
 		5587A50423EEC3DA00D75394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5587A50223EEC3DA00D75394 /* Main.storyboard */; };
 		5587A50623EEC3DB00D75394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5587A50523EEC3DB00D75394 /* Assets.xcassets */; };
 		5587A50923EEC3DB00D75394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5587A50723EEC3DB00D75394 /* LaunchScreen.storyboard */; };
-		5587A51123EEC82800D75394 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587A51023EEC82800D75394 /* MainTableViewController.swift */; };
+		5587A51123EEC82800D75394 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587A51023EEC82800D75394 /* MainViewController.swift */; };
 		5587A51323EEDBA300D75394 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */; };
 		559A377323EF0E0300893544 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A377223EF0E0300893544 /* PlaceModel.swift */; };
 		55B89A9123F1A9BD00C00121 /* NewPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */; };
@@ -28,7 +28,7 @@
 		5587A50523EEC3DB00D75394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5587A50823EEC3DB00D75394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5587A50A23EEC3DB00D75394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5587A51023EEC82800D75394 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		5587A51023EEC82800D75394 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		559A377223EF0E0300893544 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceTableViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				5587A4FC23EEC3DA00D75394 /* AppDelegate.swift */,
 				5587A4FE23EEC3DA00D75394 /* SceneDelegate.swift */,
-				5587A51023EEC82800D75394 /* MainTableViewController.swift */,
+				5587A51023EEC82800D75394 /* MainViewController.swift */,
 				5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */,
 				55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */,
 				5587A50223EEC3DA00D75394 /* Main.storyboard */,
@@ -220,7 +220,7 @@
 			files = (
 				55B89A9123F1A9BD00C00121 /* NewPlaceTableViewController.swift in Sources */,
 				5587A4FD23EEC3DA00D75394 /* AppDelegate.swift in Sources */,
-				5587A51123EEC82800D75394 /* MainTableViewController.swift in Sources */,
+				5587A51123EEC82800D75394 /* MainViewController.swift in Sources */,
 				55B89A9323F3089100C00121 /* StorageManager.swift in Sources */,
 				559A377323EF0E0300893544 /* PlaceModel.swift in Sources */,
 				5587A51323EEDBA300D75394 /* CustomTableViewCell.swift in Sources */,
