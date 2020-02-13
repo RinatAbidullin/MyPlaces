@@ -86,6 +86,9 @@
                                     <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="qC3-2X-JMt" eventType="valueChanged" id="253-rC-aVa"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -101,7 +104,11 @@
                         <viewLayoutGuide key="safeArea" id="gJ2-oh-K0G"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="CCb-6t-Im8">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="OYC-2T-Ae4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="OYC-2T-Ae4">
+                            <connections>
+                                <action selector="reversedSorting:" destination="qC3-2X-JMt" id="4bz-ts-uBv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Of-0l-9OH">
                             <connections>
                                 <segue destination="v9D-eC-UQl" kind="presentation" id="1Mo-OA-3Ot"/>
@@ -109,6 +116,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortedButton" destination="OYC-2T-Ae4" id="yL3-tR-2sY"/>
+                        <outlet property="segmentedControl" destination="xzW-7l-isx" id="XqP-Tl-3XL"/>
                         <outlet property="tableView" destination="3Vb-78-1V1" id="tNN-3K-MVJ"/>
                     </connections>
                 </viewController>
