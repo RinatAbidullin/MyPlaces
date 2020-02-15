@@ -12,6 +12,7 @@ class NewPlaceTableViewController: UITableViewController {
     
     var currentPlace: Place!
     var imageIsChanged = false
+    var currentRating = 0.0
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeImage: UIImageView!
