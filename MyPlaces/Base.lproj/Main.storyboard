@@ -309,6 +309,7 @@
                         <outlet property="placeLocation" destination="iC8-AE-MFl" id="J5y-Fw-u7E"/>
                         <outlet property="placeName" destination="pvC-7K-8x5" id="enU-VD-K8e"/>
                         <outlet property="placeType" destination="HI8-Ep-MBb" id="Bb1-Ck-xt8"/>
+                        <outlet property="ratingControl" destination="kd8-21-P4H" id="E3O-5t-e9m"/>
                         <outlet property="saveButton" destination="ybF-Ax-Geo" id="hb9-SX-Dqy"/>
                     </connections>
                 </tableViewController>
