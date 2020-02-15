@@ -164,10 +164,23 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="6yI-F1-ENO">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-eI-pda">
+                                                    <rect key="frame" x="344" y="189" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="5Dt-uL-nHE"/>
+                                                        <constraint firstAttribute="width" constant="50" id="WTs-51-Jgq"/>
+                                                    </constraints>
+                                                    <state key="normal" image="map"/>
+                                                    <connections>
+                                                        <segue destination="0XJ-8L-nu0" kind="presentation" identifier="showMap" id="oA6-xn-4h2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="6yI-F1-ENO" firstAttribute="leading" secondItem="pCr-eq-A2J" secondAttribute="leading" id="TiP-sn-bJa"/>
+                                                <constraint firstItem="r4g-eI-pda" firstAttribute="bottom" secondItem="pCr-eq-A2J" secondAttribute="bottomMargin" id="WPm-13-Dh1"/>
+                                                <constraint firstItem="r4g-eI-pda" firstAttribute="trailing" secondItem="pCr-eq-A2J" secondAttribute="trailingMargin" id="cpj-S8-JTB"/>
                                                 <constraint firstAttribute="trailing" secondItem="6yI-F1-ENO" secondAttribute="trailing" id="fPu-1t-QE7"/>
                                                 <constraint firstItem="6yI-F1-ENO" firstAttribute="top" secondItem="pCr-eq-A2J" secondAttribute="top" id="i0D-TG-h8w"/>
                                                 <constraint firstAttribute="bottom" secondItem="6yI-F1-ENO" secondAttribute="bottom" id="ra2-T6-FrK"/>
@@ -335,6 +348,45 @@
             </objects>
             <point key="canvasLocation" x="1702.8985507246377" y="221.65178571428569"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="7gg-Pn-mNG">
+            <objects>
+                <viewController id="0XJ-8L-nu0" customClass="MapViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CeP-8L-FBc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="syX-FO-ghR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9f-85-3Jx">
+                                <rect key="frame" x="344" y="40" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9cI-YI-4sX"/>
+                                    <constraint firstAttribute="width" constant="30" id="iag-hp-99t"/>
+                                </constraints>
+                                <state key="normal" image="camcel"/>
+                                <connections>
+                                    <action selector="closeVC" destination="0XJ-8L-nu0" eventType="touchUpInside" id="K5a-UK-3dP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="syX-FO-ghR" firstAttribute="trailing" secondItem="cZ4-aF-fyO" secondAttribute="trailing" id="Em1-gw-UFX"/>
+                            <constraint firstItem="syX-FO-ghR" firstAttribute="leading" secondItem="CeP-8L-FBc" secondAttribute="leading" id="Hpk-d0-QXz"/>
+                            <constraint firstAttribute="bottom" secondItem="syX-FO-ghR" secondAttribute="bottom" id="L5I-w4-MFY"/>
+                            <constraint firstItem="G9f-85-3Jx" firstAttribute="top" secondItem="cZ4-aF-fyO" secondAttribute="top" constant="40" id="Oh0-V6-3v4"/>
+                            <constraint firstItem="syX-FO-ghR" firstAttribute="top" secondItem="CeP-8L-FBc" secondAttribute="top" id="aR9-zt-qyB"/>
+                            <constraint firstItem="cZ4-aF-fyO" firstAttribute="trailing" secondItem="G9f-85-3Jx" secondAttribute="trailing" constant="40" id="z0o-Ar-SmZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZ4-aF-fyO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xbj-ki-xrC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697.1014492753625" y="221.65178571428569"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="J68-BH-BxL">
             <objects>
@@ -376,8 +428,10 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
+        <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hkz-WI-5sJ"/>
