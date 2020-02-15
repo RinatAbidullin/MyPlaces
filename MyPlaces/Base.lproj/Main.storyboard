@@ -370,14 +370,27 @@
                                     <action selector="closeVC" destination="0XJ-8L-nu0" eventType="touchUpInside" id="K5a-UK-3dP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X17-7m-TAc">
+                                <rect key="frame" x="324" y="718" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UaT-Z4-GDh"/>
+                                    <constraint firstAttribute="width" constant="50" id="adD-V8-dZB"/>
+                                </constraints>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="0XJ-8L-nu0" eventType="touchUpInside" id="2ei-P2-AZm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="syX-FO-ghR" firstAttribute="trailing" secondItem="cZ4-aF-fyO" secondAttribute="trailing" id="Em1-gw-UFX"/>
+                            <constraint firstItem="cZ4-aF-fyO" firstAttribute="bottom" secondItem="X17-7m-TAc" secondAttribute="bottom" constant="40" id="FVO-Yb-bx1"/>
                             <constraint firstItem="syX-FO-ghR" firstAttribute="leading" secondItem="CeP-8L-FBc" secondAttribute="leading" id="Hpk-d0-QXz"/>
                             <constraint firstAttribute="bottom" secondItem="syX-FO-ghR" secondAttribute="bottom" id="L5I-w4-MFY"/>
                             <constraint firstItem="G9f-85-3Jx" firstAttribute="top" secondItem="cZ4-aF-fyO" secondAttribute="top" constant="40" id="Oh0-V6-3v4"/>
                             <constraint firstItem="syX-FO-ghR" firstAttribute="top" secondItem="CeP-8L-FBc" secondAttribute="top" id="aR9-zt-qyB"/>
+                            <constraint firstItem="cZ4-aF-fyO" firstAttribute="trailing" secondItem="X17-7m-TAc" secondAttribute="trailing" constant="40" id="i2Q-1n-PdV"/>
                             <constraint firstItem="cZ4-aF-fyO" firstAttribute="trailing" secondItem="G9f-85-3Jx" secondAttribute="trailing" constant="40" id="z0o-Ar-SmZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cZ4-aF-fyO"/>
@@ -434,6 +447,7 @@
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="location" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
