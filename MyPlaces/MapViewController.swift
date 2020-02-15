@@ -65,7 +65,10 @@ class MapViewController: UIViewController {
             checkLocationAuthorization()
         } else {
             // TODO: Alert Controller
-            showAlertWithWorringAboutDeniedAuthorization()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Геопозиция отключена",
+                               message: "Перейдите в настройки телефона, чтобы включить ее")
+            }
         }
     }
     
@@ -81,7 +84,10 @@ class MapViewController: UIViewController {
             break
         case .denied:
             // TODO: Show alert controller
-            showAlertWithWorringAboutDeniedAuthorization()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Вы запретили использовать геопозицию при работе с данным приложением",
+                               message: "Перейдите в настройки телефона, чтобы включить ее")
+            }
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -95,8 +101,8 @@ class MapViewController: UIViewController {
         }
     }
     
-    func showAlertWithWorringAboutDeniedAuthorization() {
-        let alertController = UIAlertController(title: "Внимание", message: "Отсутствует доступ к геоданным", preferredStyle: .alert)
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true)
