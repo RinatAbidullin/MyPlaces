@@ -383,6 +383,17 @@
                                     <action selector="closeVC" destination="0XJ-8L-nu0" eventType="touchUpInside" id="K5a-UK-3dP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X17-7m-TAc">
+                                <rect key="frame" x="344" y="648" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UaT-Z4-GDh"/>
+                                    <constraint firstAttribute="width" constant="30" id="adD-V8-dZB"/>
+                                </constraints>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="0XJ-8L-nu0" eventType="touchUpInside" id="2ei-P2-AZm"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-Wb-Yra">
                                 <rect key="frame" x="187" y="381" width="40" height="40"/>
                                 <constraints>
@@ -406,15 +417,15 @@
                                     <action selector="doneButtonPressed" destination="0XJ-8L-nu0" eventType="touchUpInside" id="K7O-Ox-Nf7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X17-7m-TAc">
-                                <rect key="frame" x="344" y="648" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cO-Kt-zA6">
+                                <rect key="frame" x="182" y="718" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UaT-Z4-GDh"/>
-                                    <constraint firstAttribute="width" constant="30" id="adD-V8-dZB"/>
+                                    <constraint firstAttribute="height" constant="50" id="E4n-Oo-E54"/>
+                                    <constraint firstAttribute="width" constant="50" id="cV3-6C-xTb"/>
                                 </constraints>
-                                <state key="normal" image="location"/>
+                                <state key="normal" image="GetDirection"/>
                                 <connections>
-                                    <action selector="centerViewInUserLocation" destination="0XJ-8L-nu0" eventType="touchUpInside" id="2ei-P2-AZm"/>
+                                    <action selector="goButtonPressed" destination="0XJ-8L-nu0" eventType="touchUpInside" id="BGe-gu-NDA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -433,7 +444,9 @@
                             <constraint firstItem="cZ4-aF-fyO" firstAttribute="bottom" secondItem="xqU-De-j0X" secondAttribute="bottom" constant="40" id="fRb-yC-hZn"/>
                             <constraint firstItem="syX-FO-ghR" firstAttribute="top" secondItem="bTo-fy-sG2" secondAttribute="bottom" constant="-214" id="h1T-kz-uKG"/>
                             <constraint firstItem="cZ4-aF-fyO" firstAttribute="trailing" secondItem="bTo-fy-sG2" secondAttribute="trailing" constant="20" id="i5j-Mq-lpg"/>
+                            <constraint firstItem="cZ4-aF-fyO" firstAttribute="bottom" secondItem="5cO-Kt-zA6" secondAttribute="bottom" constant="40" id="ksa-g8-YaI"/>
                             <constraint firstItem="bTo-fy-sG2" firstAttribute="leading" secondItem="cZ4-aF-fyO" secondAttribute="leading" constant="20" id="oiB-4P-a6U"/>
+                            <constraint firstItem="5cO-Kt-zA6" firstAttribute="centerX" secondItem="CeP-8L-FBc" secondAttribute="centerX" id="pXr-ad-6tA"/>
                             <constraint firstItem="cZ4-aF-fyO" firstAttribute="trailing" secondItem="G9f-85-3Jx" secondAttribute="trailing" constant="40" id="z0o-Ar-SmZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cZ4-aF-fyO"/>
@@ -441,6 +454,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="bTo-fy-sG2" id="adP-lc-cH2"/>
                         <outlet property="doneButton" destination="xqU-De-j0X" id="IuD-gg-tdg"/>
+                        <outlet property="goButton" destination="5cO-Kt-zA6" id="u1y-3b-UYc"/>
                         <outlet property="mapPinImage" destination="CJp-Wb-Yra" id="MIB-6w-luL"/>
                         <outlet property="mapView" destination="syX-FO-ghR" id="fbl-au-9eh"/>
                     </connections>
@@ -489,6 +503,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
