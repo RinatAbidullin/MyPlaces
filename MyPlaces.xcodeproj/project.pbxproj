@@ -88,12 +88,12 @@
 				5587A51023EEC82800D75394 /* MainViewController.swift */,
 				5587A51223EEDBA300D75394 /* CustomTableViewCell.swift */,
 				55B89A9023F1A9BD00C00121 /* NewPlaceTableViewController.swift */,
-				5587A50223EEC3DA00D75394 /* Main.storyboard */,
 				559A377223EF0E0300893544 /* PlaceModel.swift */,
 				55B89A9223F3089100C00121 /* StorageManager.swift */,
 				55B89A9423F7D80800C00121 /* RatingControl.swift */,
 				55B89A9623F7F51400C00121 /* MapViewController.swift */,
 				5587A50523EEC3DB00D75394 /* Assets.xcassets */,
+				5587A50223EEC3DA00D75394 /* Main.storyboard */,
 				5587A50723EEC3DB00D75394 /* LaunchScreen.storyboard */,
 				5587A50A23EEC3DB00D75394 /* Info.plist */,
 			);
