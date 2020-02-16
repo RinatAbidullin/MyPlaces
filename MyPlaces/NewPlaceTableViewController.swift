@@ -73,6 +73,7 @@ class NewPlaceTableViewController: UITableViewController {
             else { return }
         
         mapVC.incomeSegueIdentifier = identifier
+        mapVC.mapViewControllerDelegate = self
         
         if identifier == "showPlace" {
             mapVC.place.name = placeName.text!
@@ -177,5 +178,11 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate {
         imageIsChanged = true
         
         dismiss(animated: true)
+    }
+}
+
+extension NewPlaceTableViewController: MapViewControllerDelegate {
+    func getAdress(_ address: String?) {
+        placeLocation.text = address
     }
 }

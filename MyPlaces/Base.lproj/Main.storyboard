@@ -256,7 +256,7 @@
                                                     </constraints>
                                                     <state key="normal" image="placeholder"/>
                                                     <connections>
-                                                        <segue destination="0XJ-8L-nu0" kind="presentation" identifier="getAdress" id="Caq-wx-vih"/>
+                                                        <segue destination="0XJ-8L-nu0" kind="presentation" identifier="getAddress" id="Caq-wx-vih"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -390,7 +390,7 @@
                                     <constraint firstAttribute="width" constant="40" id="ZiB-Yx-lV5"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-fy-sG2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-fy-sG2">
                                 <rect key="frame" x="20" y="178" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -439,7 +439,7 @@
                         <viewLayoutGuide key="safeArea" id="cZ4-aF-fyO"/>
                     </view>
                     <connections>
-                        <outlet property="adressLabel" destination="bTo-fy-sG2" id="adP-lc-cH2"/>
+                        <outlet property="addressLabel" destination="bTo-fy-sG2" id="adP-lc-cH2"/>
                         <outlet property="doneButton" destination="xqU-De-j0X" id="IuD-gg-tdg"/>
                         <outlet property="mapPinImage" destination="CJp-Wb-Yra" id="MIB-6w-luL"/>
                         <outlet property="mapView" destination="syX-FO-ghR" id="fbl-au-9eh"/>

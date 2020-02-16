@@ -10,8 +10,13 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol MapViewControllerDelegate {
+    func getAdress(_ address: String?)
+}
+
 class MapViewController: UIViewController {
     
+    var mapViewControllerDelegate: MapViewControllerDelegate?
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
@@ -20,12 +25,12 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapPinImage: UIImageView!
-    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adressLabel.text = ""
+        addressLabel.text = ""
         mapView.delegate = self
         setupMapView()
         checkLocationServices()
@@ -37,7 +42,8 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed() {
-        
+        mapViewControllerDelegate?.getAdress(addressLabel.text)
+        dismiss(animated: true)
     }
     
     @IBAction func closeVC() {
@@ -48,7 +54,7 @@ class MapViewController: UIViewController {
         if incomeSegueIdentifier == "showPlace" {
             setupPlacemark()
             mapPinImage.isHidden = true
-            adressLabel.isHidden = true
+            addressLabel.isHidden = true
             doneButton.isHidden = true
         }
     }
@@ -105,7 +111,7 @@ class MapViewController: UIViewController {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
-            if incomeSegueIdentifier == "getAdress" { showUserLocation() }
+            if incomeSegueIdentifier == "getAddress" { showUserLocation() }
             break
         case .denied:
             // TODO: Show alert controller
@@ -189,11 +195,11 @@ extension MapViewController: MKMapViewDelegate {
             
             DispatchQueue.main.async {
                 if streetName != nil && buidingNumber != nil {
-                    self.adressLabel.text = "\(streetName!), \(buidingNumber!)"
+                    self.addressLabel.text = "\(streetName!), \(buidingNumber!)"
                 } else if streetName != nil {
-                    self.adressLabel.text = "\(streetName!)"
+                    self.addressLabel.text = "\(streetName!)"
                 } else {
-                    self.adressLabel.text = ""
+                    self.addressLabel.text = ""
                 }
             }
         }
